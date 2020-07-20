@@ -142,3 +142,4 @@ FROM retire_by_title
 WHERE to_date='9999-01-01'
 
 Here is an example of the new retire_by_title2 with no duplicates:
+![](Pewlett_Hackard_Analysis/Images/retire_by_title2.PNG)
