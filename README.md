@@ -132,3 +132,13 @@ LEFT JOIN titles
 
 Example of retire_by_title
 ![](Pewlett_Hackard_Analysis/Images/retire_by_title.PNG)
+
+We had problem with duplicates. In order to remove the duplicates I used this code:
+
+--elimate duplicates in 'retire_by_title' table
+SELECT * 
+INTO retire_by_title2
+FROM retire_by_title
+WHERE to_date='9999-01-01'
+
+Here is an example of the new retire_by_title2 with no duplicates:
