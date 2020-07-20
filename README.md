@@ -44,4 +44,4 @@ from_date
 to_date
 
 Here is the image:
-![](Images/ERB.PNG)
+![](Pewlett_Hackard_Analysis/Images/ERB.PNG)
