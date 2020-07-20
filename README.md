@@ -113,4 +113,22 @@ AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 Example of retirement_info:
 ![](Pewlett_Hackard_Analysis/Images/retirement_info2.PNG)
 
+Technical Analysis Deliverable 1:
+Using the retirement_info2, titles, and salaries table the retire_by_title table was generated using this code:
+--MAKE TABLE THAT HAS NAMES, TITLES, DATE, SALARIES OF RETIREES
+select ri2.emp_no,
+		ri2.first_name,
+		ri2.last_name,
+		titles.title,
+		titles.to_date,
+		titles.from_date,
+		salaries.salary
+INTO retire_by_title
+FROM retirement_info as ri2
+LEFT JOIN salaries
+    ON (ri2.emp_no = salaries.emp_no)
+LEFT JOIN titles
+	ON (ri2.emp_no = titles.emp_no)
 
+Example of retire_by_title
+![](Pewlett_Hackard_Analysis/Images/retire_by_title.PNG)
