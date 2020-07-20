@@ -143,3 +143,13 @@ WHERE to_date='9999-01-01'
 
 Here is an example of the new retire_by_title2 with no duplicates:
 ![](Pewlett_Hackard_Analysis/Images/retire_by_title2.PNG)
+
+A tabel containing the number of employees about to retire grouped by job title was requested. I used this code:
+--number of employees who are about to retire grouped by title
+SELECT COUNT(emp_no), title
+INTO num_retire_title
+FROM retire_by_title
+GROUP BY title
+
+To make this table:
+![](Pewlett_Hackard_Analysis/Images/num_retire_title.PNG)
