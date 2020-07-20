@@ -111,4 +111,4 @@ WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
 Example of retirement_info:
-1[](Pewlett_Hackard_Analysis/Images/retirement_info.PNG)
+![](Pewlett_Hackard_Analysis/Images/retirement_info.PNG)
