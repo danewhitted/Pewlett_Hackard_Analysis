@@ -153,3 +153,25 @@ GROUP BY title
 
 To make this table:
 ![](Pewlett_Hackard_Analysis/Images/num_retire_title.PNG)
+
+A table was requested to list all the employees eligible for the retirement mentorship program. I used the employees and titles tables to create the mentor_prog2 table that contains the eligible employees. This is the code:
+--create mentor program eligibility table for those born in 1965
+select employees.emp_no,
+		employees.first_name,
+		employees.last_name,
+		employees.birth_date,
+		titles.title,
+		titles.to_date,
+		titles.from_date
+INTO mentor_prog
+FROM employees
+LEFT JOIN titles
+    ON (employees.emp_no = titles.emp_no)
+
+SELECT * 
+INTO mentor_prog2
+FROM mentor_prog
+WHERE (mentor_prog.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+
+Here is the table:
+![](Pewlett_Hackard_Analysis/Images/mentor_prog2.PNG)
